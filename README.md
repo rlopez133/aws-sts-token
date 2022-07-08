@@ -14,8 +14,23 @@ I was getting annoyed having to update my short term AWS credentials within auto
 
 ## How to use
 
+Create a vars.yml file with the vars you will need to run:
+```
+---
+controller_hostname: "controller.example.com"
+controller_username: "admin"
+controller_password: "changeme"
+credential_name: "My AWS Credential"
+aws_userarn: "<ARN_FROM_IAM>"
+aws_profile: "default"
+aws_sts_profile: "default"
+token_code: "TOKEN"
+```
+
+NOTE: `credential_name` assumes you have a Credential already created and labeled `My AWS Credential` otherwise it will create it.
+
 To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (chmod +x /usr/local/bin/aws-sts-token), and run the command:
 
 ```
-./aws-sts-token -e aws_userarn=ARN_FROM_IAM -e aws_profile=PROFILE -e aws_sts_profile=STS_PROFILE -e token_code=TOKEN -e controller_hostname=CONTROLLER_HOSTNAME -e controller_username=CONTROLLER_USERNAME -e controller_password=CONTROLLER_PASSWORD -e name=CREDENTIAL_NAME_GIVEN
+./aws-sts-token -e @vars.yml
 ```
