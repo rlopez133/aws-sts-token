@@ -12,9 +12,18 @@
 #
 #  1. Save this to a file like /usr/local/bin/aws-sts-token
 #  2. Make the file executable (chmod +x /usr/local/bin/aws-sts-token)
-#  3. Run the command:
+#  3. Create a vars.yml file similar to:
+#  ---
+#  controller_hostname: "controller.example.com"
+#  controller_username: "admin"
+#  controller_password: "changeme"
+#  credential_name: "My AWS Credential"
+#  aws_userarn: "<ARN_FROM_IAM>"
+#  aws_profile: "default"
+#  aws_sts_profile: "default"
+#  4. Run the command:
 #
-#        ./aws-sts-token -e aws_userarn=ARN_FROM_IAM -e aws_profile=PROFILE -e aws_sts_profile=STS_PROFILE -e token_code=TOKEN
+#        aws-sts-token -e @vars.yml -e token_code=TOKEN
 #
 # Options:
 #   - ARN_FROM_IAM: Your AWS user account ARN, like "arn:aws:iam::MY_ID:mfa/geerlingguy"
