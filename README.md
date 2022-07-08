@@ -14,9 +14,7 @@ I was getting annoyed having to update my short term AWS credentials within auto
 
 ## How to use
 
-As described by Jeff Geerling, 
-
-"To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (chmod +x /usr/local/bin/aws-sts-token), and run the command:
+To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (chmod +x /usr/local/bin/aws-sts-token), and run the command:
 
 ```
 ./aws-sts-token -e aws_userarn=ARN_FROM_IAM -e aws_profile=PROFILE -e aws_sts_profile=STS_PROFILE -e token_code=TOKEN -e controller_hostname=CONTROLLER_HOSTNAME -e controller_username=CONTROLLER_USERNAME -e controller_password=CONTROLLER_PASSWORD
