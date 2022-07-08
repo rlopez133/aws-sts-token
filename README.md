@@ -28,7 +28,7 @@ aws_sts_profile: "default"
 
 NOTE: `credential_name` assumes you have an `AWS Web Services` Credential already created and labeled `My AWS Credential` otherwise it will create it.
 
-To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (chmod +x /usr/local/bin/aws-sts-token), and run the command:
+To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (`chmod +x /usr/local/bin/aws-sts-token`), and run the command:
 
 ```
 ./aws-sts-token -e @vars.yml -e token_code=TOKEN
