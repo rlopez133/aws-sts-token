@@ -24,13 +24,13 @@ credential_name: "My AWS Credential"
 aws_userarn: "<ARN_FROM_IAM>"
 aws_profile: "default"
 aws_sts_profile: "default"
-token_code: "TOKEN"
 ```
 
-NOTE: `credential_name` assumes you have a Credential already created and labeled `My AWS Credential` otherwise it will create it.
+NOTE: `credential_name` assumes you have an `AWS Web Services` Credential already created and labeled `My AWS Credential` otherwise it will create it.
 
 To use it, you can download the contents of that file to `/usr/local/bin/aws-sts-token`, make the file executable (chmod +x /usr/local/bin/aws-sts-token), and run the command:
 
 ```
-./aws-sts-token -e @vars.yml
+./aws-sts-token -e @vars.yml -e token_code=TOKEN
 ```
+NOTE: `TOKEN` is the value from your MFA device. 
