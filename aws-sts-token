@@ -49,7 +49,7 @@
     controller_hostname: ''
     controller_username: ''
     controller_password: ''
-    name: ''
+    credential_name: ''
   collections:
   - awx.awx
 
@@ -86,7 +86,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: no
-        name: "{{ name }}"
+        name: "{{ credential_name }}"
         credential_type: "Amazon Web Services"
         inputs:
           username: "{{ access_key_id }}"
