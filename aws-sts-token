@@ -6,7 +6,7 @@
 # AWS STS token update playbook.
 #
 # Updating AWS session tokens with STS can be a pain. But MFA is good. So let's
-# automate the management of the .aws/credentials file to make it not painful!
+# automate the management of an AWS credential within automation controller!
 #
 # Usage:
 #
