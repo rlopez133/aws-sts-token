@@ -46,10 +46,10 @@
     aws_profile: ''
     aws_sts_profile: ''
     token_code: ''
-    controller_hostname: "controller.example.com"
-    controller_username: "admin"
-    controller_password: "changeme"
-    name: "Name_of_Created_Credential_in_Controller"
+    controller_hostname: ''
+    controller_username: ''
+    controller_password: ''
+    name: ''
   collections:
   - awx.awx
 
